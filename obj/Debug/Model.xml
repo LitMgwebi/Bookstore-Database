@@ -1,0 +1,3217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="150" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Bookstore.dll" />
+			<Metadata Name="FileName" Value="c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\Bookstore.dll" />
+			<Metadata Name="AssemblyName" Value="Bookstore" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\Bookstore.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Book_Author].[AuthorID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Book_Author]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Author].[AuthorID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Author]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Book_Author].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Book_Author]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Order_Detail]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Order_Detail]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[OrderID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Order_Detail]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Order].[OrderID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Order].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[Customer]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[User].[UserID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Customer].[CustomerID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Customer]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Book].[BookID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Author].[AuthorID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Author]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Order_Detail].[OrderDetailID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Order_Detail]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Book_Author].[BookID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Book_Author].[AuthorID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Book_Author]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Order].[OrderID]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="15" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Author]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Author].[AuthorID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Author].[Biography]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Author].[Nationality]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Author].[BirthDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Author].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="12" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="16" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Book]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[BookID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[Title]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[Genre]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[PublicationDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[Price]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallmoney]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[ISBN]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[Stock]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="11" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Book_Author]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book_Author].[BookID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book_Author].[AuthorID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Book_Author].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="14" />
+			<AttachedAnnotation Disambiguator="3" />
+			<AttachedAnnotation Disambiguator="4" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CalculateRevenueSpecificPeriod]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin 
+    set NOCOUNT on;
+
+    select SUM(TotalAmount)
+    from [Order]
+    where Active = 1
+    and OrderDate BETWEEN @StartDate and @EndDate
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[TotalAmount]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[OrderDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CalculateRevenueSpecificPeriod].[@StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CalculateRevenueSpecificPeriod].[@EndDate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CalculateRevenueSpecificPeriod].[@StartDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CalculateRevenueSpecificPeriod].[@EndDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="256" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[CalculateRevenueSpecificPeriod]&#xD;&#xA;    @StartDate date,&#xD;&#xA;    @EndDate date&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDAuthor]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    Set NOCOUNT on;
+
+    if @Command = 'Insert'
+    begin
+        Insert into Author(AuthorID, Biography, Nationality, BirthDate, Active)
+        VALUES(@AuthorID, @Biography, @Nationality, @BirthDate, @Active)
+    end
+
+    if @Command = 'GetAll'
+    BEGIN
+        SELECT *
+        From Author A
+        Left OUTER join [User] U
+        on A.AuthorID = U.UserID
+        Where A.Active = 1
+    end
+
+    if @Command = 'GetOne'
+    Begin
+        select *
+        From Author A
+        Left OUTER join [User] U
+        on A.AuthorID = U.UserID
+        Where AuthorID = @AuthorID
+        and  A.Active = 1
+    end
+
+    if @Command = 'Update'
+    BEGIN
+        UPDATE Author
+        Set
+            AuthorID = @AuthorID,
+            Biography = @Biography,
+            Nationality = @Nationality,
+            BirthDate = @BirthDate
+        where AuthorID = @AuthorID
+    end
+
+    if @Command = 'Delete'
+    BEGIN
+        update Author
+        set
+            Active = 0
+        where AuthorID = @AuthorID
+    end
+end]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDAuthor].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[Nationality]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[BirthDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDAuthor].[@AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDAuthor].[@Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDAuthor].[@Nationality]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDAuthor].[@BirthDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDAuthor].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[AuthorID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDAuthor].[@AuthorID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDAuthor].[@Biography]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDAuthor].[@Nationality]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDAuthor].[@BirthDate]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDAuthor].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDAuthor].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="225" />
+				<Property Name="Length" Value="1507" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 13 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for Author Table&#xD;&#xA;-- =============================================&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[CRUDAuthor]&#xD;&#xA;    @AuthorID int = 0,&#xD;&#xA;    @Biography varchar(255) = &quot; &quot;,&#xD;&#xA;    @Nationality varchar(30) = &quot; &quot;,&#xD;&#xA;    @BirthDate date = &quot; &quot;,&#xD;&#xA;    @Active bit = 1,&#xD;&#xA;    @Command varchar(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDBook]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+
+    if @Command = 'Insert'
+    BEGIN
+        Insert into Book(Title, Genre, PublicationDate, Price, ISBN, Stock, Active)
+        VALUes(@Title, @GEnre, @PublicationDate, @Price, @ISBN, @Stock, @Active)
+    END
+
+    if @Command = 'GetAll'
+    BEGIN
+        Select * 
+        from Book
+        Where Active = 1
+        Order by Title ASC
+    end
+
+    if @Command = 'GetOne'
+    begin
+        select *
+        from Book
+        Where BookID = @BookID
+        And Active = 1
+    end
+
+    if @Command = 'Update'
+    begin
+        Update Book
+        set
+            Title = @Title,
+            Genre = @Genre,
+            PublicationDate = @PublicationDate,
+            Price = @Price,
+            ISBN = @ISBN
+        where BookID = @BookID
+    end
+
+    if @Command = 'Delete'
+    BEGIN
+        update Book
+        set
+            Active = 0
+        where BookID = @BookID
+    end
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Genre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[PublicationDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[ISBN]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Stock]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@Genre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@PublicationDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@ISBN]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@Stock]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBook].[@BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@BookID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@Title]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@Genre]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@PublicationDate]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@Price]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallmoney]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@ISBN]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@Stock]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBook].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="223" />
+				<Property Name="Length" Value="1464" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 12 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for Book Table&#xD;&#xA;-- =============================================&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[CRUDBook]&#xD;&#xA;    @BookID int = 0,&#xD;&#xA;    @Title varchar(50) = &quot; &quot;,&#xD;&#xA;    @Genre varchar(20) = &quot; &quot;,&#xD;&#xA;    @PublicationDate date = &quot; &quot;,&#xD;&#xA;    @Price SMALLMONEY = 0,&#xD;&#xA;    @ISBN varchar(25) = &quot; &quot;,&#xD;&#xA;    @Stock int = 0,&#xD;&#xA;    @Active bit = 1,&#xD;&#xA;    @Command varchar(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDBookAuthor]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin
+    Set nOcount on;
+
+    if @Command = 'Insert'
+    begin
+        insert into Book_Author(BookID, AuthorID, Active)
+        values(@BookID, @AuthorID, @Active)
+    END
+
+    if @Command = 'GetAll'
+    begin
+        SELECT *
+        From Book_Author BA
+        left outer join Book
+        on BA.BookID = Book.BookID
+        left outer join Author
+        on BA.AuthorID = Author.AuthorID
+        where BA.Active = 1
+    end
+
+    if @Command =  'GetOne'
+    BEGIN
+        SELECT *
+        From Book_Author BA
+        left outer join Book
+        on BA.BookID = Book.BookID
+        left outer join Author
+        on BA.AuthorID = Author.AuthorID
+        where BA.Active = 1 and BA.AuthorID = @AuthorID and BA.BookID = @BookID
+    end
+
+    if @Command = 'GetByBook'
+    BEGIN
+        SELECT *
+        From Book_Author BA
+        inner join Book
+        on BA.BookID = Book.BookID
+        inner join Author
+        on BA.AuthorID = Author.AuthorID
+        where BA.Active = 1 and BA.BookID = @BookID
+    end
+
+    if @Command = 'Delete'
+    BEGIN
+        update Book_Author
+        set
+            Active = 0
+        where BookID = @BookID and AuthorID = @AuthorID
+    end
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDBookAuthor].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBookAuthor].[@BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBookAuthor].[@AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDBookAuthor].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Author].[AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[BookID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBookAuthor].[@BookID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBookAuthor].[@AuthorID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBookAuthor].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDBookAuthor].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="230" />
+				<Property Name="Length" Value="1600" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 13 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for Book_Author Table&#xD;&#xA;-- =============================================&#xD;&#xA;&#xD;&#xA;CREATE PROCEDURE [dbo].[CRUDBookAuthor]&#xD;&#xA;    @BookID int = 0,&#xD;&#xA;    @AuthorID int = 0,&#xD;&#xA;    @Active bit = 1,&#xD;&#xA;    @Command varchar(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDCustomer]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin
+    set nocount on;
+
+    if @Command = 'Insert'
+    begin 
+        Insert into Customer(CustomerID, PostalAddress, Active)
+        values (@CustomerID, @PostalAddress, @Active)
+    end
+
+    if @Command = 'GetAll'
+    begin
+        Select * 
+        from Customer C
+        left OUTER join [User] U
+        On C.CustomerID = U.UserID
+        where C.Active = 1
+    end
+
+    if @Command = 'GetOne'
+    begin
+        Select * 
+        from Customer C
+        left OUTER join [User] U
+        On C.CustomerID = U.UserID
+        where C.Active = 1
+        and CustomerID = @CustomerID
+    end
+
+    if @Command = 'Update'
+    begin
+        Update Customer
+        set
+            CustomerID = @CustomerID,
+            PostalAddress = @PostalAddress
+        where CustomerID = @CustomerID
+    end
+
+    if @Command = 'Delete'
+    BEGIN
+        update Customer
+        set
+            Active = 0
+        where CustomerID = @CustomerID
+    end
+end]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDCustomer].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[PostalAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDCustomer].[@CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDCustomer].[@PostalAddress]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDCustomer].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDCustomer].[@CustomerID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDCustomer].[@PostalAddress]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDCustomer].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDCustomer].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="227" />
+				<Property Name="Length" Value="1377" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 13 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for Customer Table&#xD;&#xA;-- =============================================&#xD;&#xA;&#xD;&#xA;CREATE procedure [dbo].[CRUDCustomer]&#xD;&#xA;    @CustomerID int = 0,&#xD;&#xA;    @PostalAddress varchar(255) = &quot; &quot;,&#xD;&#xA;    @Active bit = 1,&#xD;&#xA;    @Command varchar(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDOrder]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    set nocount on;
+
+    if @Command = 'Insert'
+    begin 
+        Insert Into [Order](OrderDate, TotalAmount, Comment, CustomerID, Active)
+        Values (@OrderDate, @TotalAmount, @Comment, @CustomerID, @Active)
+    end
+
+    if @Command = 'GetAll'
+    begin 
+        select *
+        from [Order] O
+        inner join Customer C
+        ON O.CustomerID = C.CustomerID
+        where O.Active = 1
+    END
+
+    if @Command = 'GetOne'
+    BEGIN
+        Select *
+        from [Order] O
+        inner join Customer C
+        on O.CustomerID = C.CustomerID
+        Where O.OrderID = @OrderID
+        And O.Active = 1
+    end
+
+    if @Command = 'Update'
+    begin
+        update [Order]
+        set
+            OrderDate = @OrderDate,
+            TotalAmount = @TotalAmount,
+            Comment = @Comment,
+            CustomerID = @CustomerID
+        where OrderID = @OrderID
+    end
+    
+    if @Command = 'Update'
+    begin
+        update [Order]
+        set
+            Active = 0
+        where OrderID = @OrderID
+    end
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[OrderDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[TotalAmount]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[Comment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@OrderDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@TotalAmount]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@Comment]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrder].[@OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[OrderID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@OrderID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@OrderDate]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@TotalAmount]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@Comment]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@CustomerID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrder].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="222" />
+				<Property Name="Length" Value="1531" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 13 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for Order Table&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[CRUDOrder]&#xD;&#xA;    @OrderID int = 0,&#xD;&#xA;    @OrderDate date = &quot; &quot;,&#xD;&#xA;    @TotalAmount money = 0,&#xD;&#xA;    @Comment varchar(255) = &quot; &quot;,&#xD;&#xA;    @CustomerID int = 0,&#xD;&#xA;    @Active bit = 1,&#xD;&#xA;    @Command varchar(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDOrderDetail]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin
+    set nocount on;
+
+    if @Command = 'Insert'
+    BEGIN
+        Insert into Order_Detail(Quantity, UnitPrice, OrderID, BookID, Active)
+        VALUES(@Quantity, @UnitPrice, @OrderID, @BookID, @Active)
+    end
+
+    if @Command = 'GetAll'
+    BEGIN
+        select *
+        from Order_Detail OD
+        inner join [Order] O
+        on OD.OrderID = O.OrderID
+        inner join Book B
+        on OD.BookID = B.BookID
+        where OD.Active = 1
+    end
+
+    if @Command = 'GetOne'
+    BEGIN
+        select *
+        from Order_Detail OD
+        inner join [Order] O
+        on OD.OrderID = O.OrderID
+        inner join Book B
+        on OD.BookID = B.BookID
+        where OD.Active = 1 and OrderDetailID = @OrderDetailID
+    end
+
+    if @Command = 'Update'
+    Begin
+        Update Order_Detail
+        set 
+            Quantity = @Quantity,
+            UnitPrice = @UnitPrice,
+            OrderID = @OrderID,
+            BookID = @BookID
+        where OrderDetailID = @OrderDetailID
+    end
+
+    if @Command = 'Delete'
+    begin
+        update Order_Detail
+        set 
+            Active = 0
+        where OrderDetailID = @OrderDetailID
+    end
+end]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@UnitPrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[OrderID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[OrderDetailID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDOrderDetail].[@OrderDetailID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[OrderDetailID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@OrderDetailID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@Quantity]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@UnitPrice]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallmoney]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@OrderID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@BookID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDOrderDetail].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="229" />
+				<Property Name="Length" Value="1663" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 13 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for Order_Detail Table&#xD;&#xA;-- =============================================&#xD;&#xA;CREATE PROCEDURE [dbo].[CRUDOrderDetail]&#xD;&#xA;    @OrderDetailID int = 0,&#xD;&#xA;    @Quantity int = 0,&#xD;&#xA;    @UnitPrice SMALLMONEY = 0,&#xD;&#xA;    @OrderID int = 0,&#xD;&#xA;    @BookID int = 0,&#xD;&#xA;    @Active bit = 0,&#xD;&#xA;    @Command VARCHAR(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[CRUDUser]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    set nocount on;
+
+    if @Command = 'Insert'
+    begin
+        Insert into [User](Firstname, Lastname, Email, PhoneNumber, UserType, Active)
+        VALUEs(@Firstname, @Lastname, @Email, @PhoneNumber, @UserType, @Active)
+    end
+
+    if @Command = 'GetAll'
+    begin
+        select *
+        from [User]
+        Where Active = 1
+    end
+
+    if @Command = 'GetOne'
+    begin
+        select *
+        from [User]
+        Where UserID = @UserID and Active = 1
+    END
+
+    if @Command = 'Update'
+    BEGIN
+        Update [User]
+        SET
+            Firstname = @Firstname,
+            Lastname = @Lastname,
+            Email = @Email,
+            PhoneNumber = @PhoneNumber,
+            UserType = @UserType
+        where UserID = @UserID
+    end
+
+    if @Command = 'Delete'
+    BEGIN
+        Update [User]
+        Set
+            Active = 0
+        where UserID = @UserID
+    END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@Command]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Firstname]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Lastname]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[PhoneNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@Firstname]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@Lastname]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@PhoneNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@UserType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[CRUDUser].[@UserID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@UserID]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@Firstname]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@Lastname]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@Email]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@PhoneNumber]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@UserType]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@Active]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[1]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[CRUDUser].[@Command]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="CreateOffset" Value="223" />
+				<Property Name="Length" Value="1436" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="-- =============================================&#xD;&#xA;-- Author:&#x9;&#x9;Lithi Mgwebi&#xD;&#xA;-- Create date: 14 March 2024&#xD;&#xA;-- Description:&#x9;Create, Read, Update and Delete for User Table&#xD;&#xA;-- =============================================&#xD;&#xA;&#xD;&#xA;Create PROCEDURE CRUDUser&#xD;&#xA;    @UserID int = 0,&#xD;&#xA;    @Firstname varchar(20) = &quot; &quot;,&#xD;&#xA;    @Lastname varchar(25) = &quot; &quot;,&#xD;&#xA;    @Email VARCHAR(30) = &quot; &quot;,&#xD;&#xA;    @PhoneNumber varchar(20) = &quot; &quot;,&#xD;&#xA;    @UserType varchar(5) = &quot; &quot;,&#xD;&#xA;    @Active bit = 1,&#xD;&#xA;    @Command varchar(10) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Customer]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Customer].[CustomerID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Customer].[PostalAddress]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Customer].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="10" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="17" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Author_User]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Author].[AuthorID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Author]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="16" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_Customer_User]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Customer]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="17" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetBooksByAuthor]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[ 
+Begin
+    set NOCOUNT on;
+
+    select *
+    from Book_Author BA
+    FULL join Book B
+    on BA.BookID = B.BookID
+    Full join [User] U
+    on BA.AuthorID = U.UserID
+    where BA.Active = 1
+    and BA.AuthorID = @AuthorID
+    Order by B.Title
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Book_Author]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book_Author].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetBooksByAuthor].[@AuthorID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Title]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetBooksByAuthor].[@AuthorID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="325" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE Procedure [dbo].[GetBooksByAuthor]&#xD;&#xA;    @AuthorID int&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetBooksByGenre]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin
+    set NOCOUNT on;
+
+    select *
+    from Book
+    where Active = 1
+    and Genre LIKE '%' + @Genre + '%'
+    order by Title ASC
+end]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Genre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetBooksByGenre].[@Genre]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Title]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetBooksByGenre].[@Genre]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[" "]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="223" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetBooksByGenre]&#xD;&#xA;    @Genre varchar(20) = &quot; &quot;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetBooksOutOfStock]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin
+    set nocount on;
+
+    select *
+    from Book
+    Where Stock = 0
+    and Active = 1
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Stock]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Active]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="145" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="create PROCEDURE GetBooksOutOfStock &#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetCustomersWhoOrdered]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+begin 
+    set NOCOUNT on;
+
+    select *
+    from Customer
+    inner join [User]
+    on Customer.CustomerID = [User].UserID
+    Where CustomerID in (
+        select CustomerID
+        from [Order]
+        where Active = 1
+    )
+    Order by [User].Firstname
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Customer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Customer].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Firstname]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="327" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[GetCustomersWhoOrdered]&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetOrdersByCustomer]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    set nocount on;
+
+    select *
+    from [Order] O
+    inner join [User] U
+    on O.CustomerID = U.UserID
+    where O.CustomerID = @CustomerID
+    and O.Active = 1
+    Order by U.Firstname
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[UserID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetOrdersByCustomer].[@CustomerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order].[Active]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[User].[Firstname]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetOrdersByCustomer].[@CustomerID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="281" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE procedure [dbo].[GetOrdersByCustomer]&#xD;&#xA;    @CustomerID INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Order]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order].[OrderID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order].[OrderDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order].[TotalAmount]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[money]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order].[Comment]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order].[CustomerID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="15" />
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Order_Detail]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order_Detail].[OrderDetailID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order_Detail].[Quantity]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order_Detail].[UnitPrice]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[smallmoney]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order_Detail].[OrderID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order_Detail].[BookID]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Order_Detail].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="13" />
+			<AttachedAnnotation Disambiguator="5" />
+			<AttachedAnnotation Disambiguator="6" />
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[TopSellingBook]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[ 
+begin 
+    set nocount on;
+
+        with tmp as 
+        (
+            Select SUM(OD.Quantity) as [Total_Quantities], B.Title as Title
+            From Order_Detail OD
+            inner join Book B
+            on OD.BookID = B.BookID
+            GROUP By OD.BookID, B.Title
+        )
+        Select Title, Max(Total_Quantities) as [Total Quantity]
+        from TMP
+        GROUP by Title
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Order_Detail]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[BookID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Order_Detail].[Quantity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Book].[Title]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[TopSellingBook].[CTE1].[tmp]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[TopSellingBook].[CTE1].[tmp].[Total_Quantities]" />
+							</Entry>
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[TopSellingBook].[CTE1].[tmp].[Title]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dbo].[Book].[Title]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="445" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE procedure TopSellingBook&#xD;&#xA;&#xD;&#xA;as" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[User]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[UserID]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Firstname]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Lastname]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="25" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Email]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[PhoneNumber]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[UserType]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[User].[Active]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="9" />
+		</Element>
+	</Model>
+</DataSchemaModel>

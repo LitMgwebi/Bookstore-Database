@@ -1,0 +1,10 @@
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\bin\Debug\Bookstore.dacpac
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\bin\Debug\Bookstore.dll
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\bin\Debug\Bookstore.pdb
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\Bookstore.sqlproj.AssemblyReference.cache
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\Model.xml
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\refactor.xml
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\postdeploy.sql
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\predeploy.sql
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\Bookstore.dll
+c:\Users\lithi\OneDrive\Documentos\Programming\Databases\Bookstore\obj\Debug\Bookstore.pdb

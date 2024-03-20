@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "3nrry3nw05M40i5XjdPR1kyWj51tEK9fhvhoe7wDXfsezjJ24kcM4/FoD1/G8N9PKzFflrMlvhuK/68QJDHQpA==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\lithi\\OneDrive\\Documentos\\Programming\\Databases\\Bookstore\\Bookstore.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lithi\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\lithi\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net46\\1.0.0\\microsoft.netframework.referenceassemblies.net46.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
